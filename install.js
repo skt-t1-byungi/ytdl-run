@@ -18,7 +18,7 @@ const isWin = require('is-windows')();
   console.log(`Installed successfully. (ver ${version})`)
 })()
 
-async function install (params) {
+async function install () {
   if (await commandExists('youtube-dl')) return 'youtube-dl'
 
   const filename = isWin ? 'youtube-dl.exe' : 'youtube-dl'
