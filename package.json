@@ -1,0 +1,34 @@
+{
+  "name": "ytdl-run",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "youtube-dl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skt-t1-byungi/ytdl-run.git"
+  },
+  "author": {
+    "name": "skt-t1-byungi",
+    "email": "tiniwz@gmail.com"
+  },
+  "scripts": {
+    "postinstall": "node ./install.js"
+  },
+  "dependencies": {
+    "command-exists": "^1.2.2",
+    "download": "^6.2.5",
+    "execa": "^0.10.0",
+    "fs-extra": "^5.0.0",
+    "is-windows": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-config-byungi": "^0.0.12"
+  },
+  "eslintConfig": {
+    "extends": "byungi"
+  }
+}
