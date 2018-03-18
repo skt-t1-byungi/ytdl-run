@@ -24,6 +24,14 @@ const ytdl = require('ytdl-run')
 })()
 ```
 
+### Info
+```js
+const info = await ytdl.getInfo('https://www.youtube.com/watch?v=JQGRg8XBnB4')
+
+console.log(info.title) // [MV] MOMOLAND (모모랜드) _ BBoom BBoom (뿜뿜)
+console.log(info.duration) // 210
+```
+
 ### Mp3
 ```js
 // download mp3 track into "music/" directory

@@ -1,2 +1,3 @@
-bin-path.js
 bin/
+tmp/
+bin-path.js
