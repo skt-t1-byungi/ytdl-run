@@ -24,9 +24,24 @@ const ytdl = require('ytdl-run')
 })()
 ```
 
+### Mp3
+```js
+// download mp3 track into "music/" directory
+ytdl.mp3('https://www.youtube.com/watch?v=JQGRg8XBnB4', {cwd: 'music/'})
+```
+
+### Stream 
+```js
+const fs = require('fs')
+
+ytdl.stream('https://www.youtube.com/watch?v=JQGRg8XBnB4')
+  .stdout
+  .pipe(fs.createWriteStream('video.mp4'))
+```
+
 ### Options
 ```js
-// mp3 track download
+// same as ytdl.mp3('https://www.youtube.com/watch?v=JQGRg8XBnB4')
 const opts = [
   '-x',
   '-o', '%(title)s.%(ext)s',
@@ -35,15 +50,6 @@ const opts = [
   'https://www.youtube.com/watch?v=JQGRg8XBnB4'
 ]
 ytdl(opts)
-```
-
-### Stream 
-```js
-const fs = require('fs')
-
-ytdl(['-o', '-', 'https://www.youtube.com/watch?v=JQGRg8XBnB4'])
-  .stdout
-  .pipe(fs.createWriteStream('video.mp4'))
 ```
 
 ## Related
