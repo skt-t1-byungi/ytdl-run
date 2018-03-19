@@ -1,4 +1,4 @@
-const commandExists = require('command-exists')
+const commandExists = require('command-exists').sync
 const download = require('download')
 const path = require('path')
 const execa = require('execa')
@@ -19,7 +19,7 @@ const isWin = require('is-windows')();
 })()
 
 async function install () {
-  if (await commandExists('youtube-dl')) return 'youtube-dl'
+  if (commandExists('youtube-dl')) return 'youtube-dl'
 
   const filename = isWin ? 'youtube-dl.exe' : 'youtube-dl'
   const dirPath = path.join(__dirname, 'bin')
