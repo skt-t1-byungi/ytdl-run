@@ -2,8 +2,6 @@ const test = require('ava')
 const fs = require('fs-extra')
 const path = require('path')
 const ytdl = require('.')
-const isMp3 = require('is-mp3')
-const readChunk = require('read-chunk')
 
 const testVideo = 'https://www.youtube.com/watch?v=C0DPdy98e4c'
 const tmpDir = path.join(__dirname, 'tmp/')
@@ -37,11 +35,4 @@ test('basic, stream', async t => {
 test('getInfo', async t => {
   const {title} = await ytdl.getInfo(testVideo)
   t.is(title, 'TEST VIDEO')
-})
-
-test('mp3', async t => {
-  await ytdl.mp3([testVideo, '-o', 'test.%(ext)s'], {cwd: tmpDir})
-
-  const buf = await readChunk(path.join(tmpDir, 'test.mp3'), 0, 3)
-  t.true(isMp3(buf))
 })

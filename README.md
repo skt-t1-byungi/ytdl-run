@@ -32,12 +32,6 @@ console.log(info.title) // [MV] MOMOLAND (모모랜드) _ BBoom BBoom (뿜뿜)
 console.log(info.duration) // 210
 ```
 
-### Mp3
-```js
-// download mp3 track into "music/" directory
-ytdl.mp3('https://www.youtube.com/watch?v=JQGRg8XBnB4', {cwd: 'music/'})
-```
-
 ### Stream 
 ```js
 const fs = require('fs')
@@ -49,11 +43,8 @@ ytdl.stream('https://www.youtube.com/watch?v=JQGRg8XBnB4')
 
 ### Options
 ```js
-// same as ytdl.mp3('https://www.youtube.com/watch?v=JQGRg8XBnB4')
 const opts = [
-  '-x',
   '-o', '%(title)s.%(ext)s',
-  '--audio-format', 'mp3',
   '--audio-quality', '0',
   'https://www.youtube.com/watch?v=JQGRg8XBnB4'
 ]

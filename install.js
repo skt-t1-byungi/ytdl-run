@@ -1,8 +1,9 @@
-const commandExists = require('command-exists').sync
+const commandExists = require('command-exists')
 const download = require('download')
 const path = require('path')
 const execa = require('execa')
 const fs = require('fs-extra')
+const slash = require('slash')
 
 const isWin = require('is-windows')();
 
@@ -13,13 +14,16 @@ const isWin = require('is-windows')();
   const {stdout: version} = await execa(binPath, ['--version'])
 
   // create path file
-  await fs.writeFile(path.join(__dirname, 'bin-path.js'), `module.exports = "${binPath}"`)
+  await fs.writeFile(path.join(__dirname, 'bin-path.js'), `module.exports = "${slash(binPath)}"`)
 
   console.log(`Installed successfully. (ver ${version})`)
 })()
 
 async function install () {
-  if (commandExists('youtube-dl')) return 'youtube-dl'
+  try {
+    if (await commandExists('youtube-dl')) return 'youtube-dl'
+  } catch (err) {
+  }
 
   const filename = isWin ? 'youtube-dl.exe' : 'youtube-dl'
   const dirPath = path.join(__dirname, 'bin')
