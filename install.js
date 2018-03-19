@@ -3,7 +3,7 @@ const download = require('download')
 const path = require('path')
 const execa = require('execa')
 const fs = require('fs-extra')
-const slash = require('slash')
+const normalize = require('normalize-path')
 
 const isWin = require('is-windows')();
 
@@ -14,7 +14,7 @@ const isWin = require('is-windows')();
   const {stdout: version} = await execa(binPath, ['--version'])
 
   // create path file
-  await fs.writeFile(path.join(__dirname, 'bin-path.js'), `module.exports = "${slash(binPath)}"`)
+  await fs.writeFile(path.join(__dirname, 'bin-path.js'), `module.exports = "${normalize(binPath)}"`)
 
   console.log(`Installed successfully. (ver ${version})`)
 })()
