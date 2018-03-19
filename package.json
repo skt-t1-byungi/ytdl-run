@@ -1,5 +1,6 @@
 {
   "name": "ytdl-run",
+  "description": "youtube-dl runner in node.js",
   "version": "0.1.1",
   "main": "index.js",
   "license": "MIT",

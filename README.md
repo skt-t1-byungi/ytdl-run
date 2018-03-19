@@ -1,5 +1,5 @@
 # ytdl-run
-> youtube-dl runner in node.js
+youtube-dl runner in node.js
 
 [![npm](https://img.shields.io/npm/v/ytdl-run.svg?style=flat-square)](https://www.npmjs.com/package/ytdl-run)
 [![npm](https://img.shields.io/npm/dt/ytdl-run.svg?style=flat-square)](https://www.npmjs.com/package/ytdl-run)
@@ -45,6 +45,7 @@ ytdl.stream('https://www.youtube.com/watch?v=JQGRg8XBnB4')
 ```js
 const opts = [
   '-o', '%(title)s.%(ext)s',
+
   '--audio-quality', '0',
   'https://www.youtube.com/watch?v=JQGRg8XBnB4'
 ]
