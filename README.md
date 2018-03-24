@@ -45,7 +45,6 @@ ytdl.stream('https://www.youtube.com/watch?v=JQGRg8XBnB4')
 ```js
 const opts = [
   '-o', '%(title)s.%(ext)s',
-
   '--audio-quality', '0',
   'https://www.youtube.com/watch?v=JQGRg8XBnB4'
 ]
