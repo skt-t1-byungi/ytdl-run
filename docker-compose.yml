@@ -1,0 +1,12 @@
+version: '3.2'
+services:
+  node:
+    build: .
+    user: node
+    working_dir: /home/node/app
+    command: "npm run postinstall"
+    volumes:
+      - ./:/home/node/app
+
+
+
