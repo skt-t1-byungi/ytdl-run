@@ -1,5 +1,5 @@
 {
-  "name": "ytdl-run",
+  "name": "ytdl-run-ng",
   "description": "youtube-dl runner in node.js",
   "version": "0.1.2",
   "main": "index.js",
@@ -9,11 +9,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/skt-t1-byungi/ytdl-run.git"
+    "url": "https://github.com/insanity54/ytdl-run.git"
   },
   "author": {
-    "name": "skt-t1-byungi",
-    "email": "tiniwz@gmail.com"
+    "name": "insanity54",
+    "email": "chris@grimtech.net"
   },
   "scripts": {
     "postinstall": "node ./install.js",

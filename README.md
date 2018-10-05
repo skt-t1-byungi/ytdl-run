@@ -1,8 +1,9 @@
-# ytdl-run
-youtube-dl runner in node.js
+# ytdl-run-ng
 
-[![npm](https://img.shields.io/npm/v/ytdl-run.svg?style=flat-square)](https://www.npmjs.com/package/ytdl-run)
-[![npm](https://img.shields.io/npm/dt/ytdl-run.svg?style=flat-square)](https://www.npmjs.com/package/ytdl-run)
+youtube-dl runner in node.js. Fork of https://github.com/skt-t1-byungi/ytdl-run which adds improvements to install.js (hopefully to be merged by upstream project)
+
+[![npm](https://img.shields.io/npm/v/ytdl-run-ng.svg?style=flat-square)](https://www.npmjs.com/package/ytdl-run)
+[![npm](https://img.shields.io/npm/dt/ytdl-run-ng.svg?style=flat-square)](https://www.npmjs.com/package/ytdl-run)
 
 ## Install
 ``` sh
