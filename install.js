@@ -20,14 +20,14 @@ const isWin = require('is-windows')();
 })()
 
 async function install () {
-  try {
-    if (await commandExists('youtube-dl')) return 'youtube-dl'
-  } catch (err) {
-  }
+  if (commandExists.sync('youtube-dl')) return 'youtube-dl'
 
   const filename = isWin ? 'youtube-dl.exe' : 'youtube-dl'
   const dirPath = path.join(__dirname, 'bin')
 
   await download('https://yt-dl.org/downloads/latest/' + filename, dirPath)
-  return path.join(dirPath, filename)
+  const binPath = path.join(dirPath, filename)
+  await fs.chmod(binPath, 0o755)
+
+  return binPath
 }
