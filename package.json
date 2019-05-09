@@ -28,9 +28,9 @@
     "normalize-path": "^2.1.1"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "eslint": "^4.19.0",
-    "eslint-config-byungi": "^0.0.12"
+    "ava": "0.25.0",
+    "eslint": "4.19.1",
+    "eslint-config-byungi": "0.0.12"
   },
   "eslintConfig": {
     "extends": "byungi"
