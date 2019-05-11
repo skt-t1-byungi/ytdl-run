@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "ava": "0.25.0",
-    "eslint": "4.19.1",
+    "eslint": "5.16.0",
     "eslint-config-byungi": "0.2.9"
   },
   "eslintConfig": {
