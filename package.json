@@ -23,7 +23,7 @@
     "command-exists": "^1.2.2",
     "download": "^6.2.5",
     "execa": "^1.0.0",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^8.0.0",
     "is-windows": "^1.0.2",
     "normalize-path": "^3.0.0"
   },
