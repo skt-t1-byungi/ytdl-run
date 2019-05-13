@@ -2,3 +2,5 @@ node_modules/
 bin/
 tmp/
 bin-path.js
+*.log
+*.lock
