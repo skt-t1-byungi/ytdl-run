@@ -33,7 +33,7 @@ console.log(info.title) // [MV] MOMOLAND (모모랜드) _ BBoom BBoom (뿜뿜)
 console.log(info.duration) // 210
 ```
 
-### Stream 
+### Stream
 ```js
 const fs = require('fs')
 
@@ -50,6 +50,11 @@ const opts = [
   'https://www.youtube.com/watch?v=JQGRg8XBnB4'
 ]
 ytdl(opts)
+```
+
+### Update to latest version
+```js
+await ytdl.update() // => 2019.05.11 (Returns current version)
 ```
 
 ## Related
