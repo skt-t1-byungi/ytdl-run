@@ -7,6 +7,10 @@
     "keywords": [
         "youtube-dl"
     ],
+    "files": [
+        "index.js",
+        "install.js"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/skt-t1-byungi/ytdl-run.git"
