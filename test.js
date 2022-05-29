@@ -7,7 +7,10 @@ const testVideo = 'https://www.youtube.com/watch?v=C0DPdy98e4c'
 const tmpDir = path.join(__dirname, 'tmp/')
 
 test.before(async t => {
-    await fs.ensureDir(tmpDir)
+    await /* TODO: JSFIX could not patch the breaking change:
+    Creating a directory with fs-extra no longer returns the path 
+    Suggested fix: The returned promise no longer includes the path of the new directory */
+    fs.ensureDir(tmpDir)
 })
 
 test.after(async t => {
